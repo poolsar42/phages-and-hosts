@@ -15,7 +15,7 @@ args= parser.parse_args()
 
 def run_prodigal_w_specific_code(fasta_test, output_prefix):
     with open(os.devnull) as out_handle:
-        system_requiry = ['perl', args.gms2_path, '--seq', fasta_test + '.fasta', '--genome-type', 'auto', '--output', output_prefix + '.OUT']
+        system_requiry = ['perl', args.gms2_path, '--seq', fasta_test , '--genome-type', 'auto', '--output', output_prefix + '.OUT']
         subprocess.call(system_requiry,stdout=out_handle, stderr=out_handle)
 
 run_prodigal_w_specific_code(args.input, args.output)
